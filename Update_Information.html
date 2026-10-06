@@ -52,13 +52,16 @@
         }
         
 .news-box {
-    padding: 15px 30px; /* 左右の余白を少し広げるとバランスが良いです */
+    padding: 30px; /* 文字が詰まらないように余白を少し広げました */
     border: 1px solid #ccc;
     margin-bottom: 20px;
     background-color: rgba(255, 255, 255, 0.95); 
     color: #111111; 
     word-wrap: break-word; 
-    border-radius: 9999px; /* 特大の値を指定することで限界まで丸くなります */
+    
+    /* 9999pxをやめて、これくらいにするとちょうど良い丸みになります */
+    border-radius: 32px; 
+    
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
 }
 
