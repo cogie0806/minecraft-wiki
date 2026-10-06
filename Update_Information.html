@@ -15,7 +15,7 @@
             margin: 0;
             padding: 10px;
             font-family: sans-serif;
-            background-image: url('MC26.3.png');
+            background-image: url('mc26.3.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -51,17 +51,17 @@
             background-color: #2563eb;
         }
         
-        /* ニュースボックス（白を濃くして文字を読みやすく、角を丸くしました） */
-        .news-box {
-            padding: 15px; 
-            border: 1px solid #ccc;
-            margin-bottom: 20px;
-            background-color: rgba(255, 255, 255, 0.95); 
-            color: #111111; 
-            word-wrap: break-word; 
-            border-radius: 8px; 
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
-        }
+.news-box {
+    padding: 15px 30px; /* 左右の余白を少し広げるとバランスが良いです */
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.95); 
+    color: #111111; 
+    word-wrap: break-word; 
+    border-radius: 9999px; /* 特大の値を指定することで限界まで丸くなります */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+}
+
     </style>
 </head>
 <body>
