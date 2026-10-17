@@ -3,106 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>マイクラアップデート情報 - cogie0806マイクラwiki</title>
-    
+    <!-- ファビコン -->
     <link rel="icon" href="grass.png" type="image/png">
-
+    <title>リソースパック配布ページ - cogie0806マイクラwiki</title>
     <style>
-        /* 背景画像の設定 */
-        html, body {
-            max-width: 100%;
-            overflow-x: hidden;
+        /* 全体の基本設定 */
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+            text-align: center;
             margin: 0;
-            padding: 10px;
-            font-family: sans-serif;
-            background-image: url('mc26.3.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-        }
-        
-        /* タイトル文字を白くして、影をつけて見やすくしました */
-        h1, h2 {
+            padding: 40px 15px;
+            min-height: 100vh;
+            box-sizing: border-box;
             color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9), -1px -1px 0 rgba(0,0,0,0.9), 1px -1px 0 rgba(0,0,0,0.9), -1px 1px 0 rgba(0,0,0,0.9), 1px 1px 0 rgba(0,0,0,0.9);
+
+            /* 背景画像 */
+            background-image: url("mc26.3.png"); 
+            background-size: cover;             
+            background-position: center;        
+            background-repeat: no-repeat;       
+            background-attachment: fixed;       
         }
-        
-        /* リンクボタンのデザイン */
+
+        /* コンテンツを囲む半透明 of 黒いボックス */
+        .container {
+            background-color: rgba(0, 0, 0, 0.75);
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            border: 1px solid #444;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-top: 0;
+            color: #ffb74d; /* マイクラ風のオレンジ・ゴールド色 */
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #e0e0e0;
+            text-align: left;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+
+        /* 📋 情報テーブル */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 14px;
+        }
+
+        .info-table th, .info-table td {
+            border: 1px solid #555;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .info-table th {
+            background-color: #222;
+            color: #ffb74d;
+            width: 30%;
+        }
+
+        .info-table td {
+            background-color: #333;
+        }
+
+        /* 🔗 ホームページの形をベースにした「青いボタン」デザイン */
         .link-btn {
             display: block;
             text-align: center;
-            background-color: #10b981; 
+            background-color: #3b82f6; 
             color: white;
             text-decoration: none; 
-            padding: 12px; 
-            margin: 8px 0;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 14px;
+            padding: 8px;              
+            margin: 12px auto;         
+            border-radius: 4px;        
+            font-size: 14px;           
+            width: 100%;               
+            box-sizing: border-box;
+            border: none;              
+            transition: background-color 0.2s;
         }
-        .link-btn:hover {
-            background-color: #059669; 
-        }
-        .ai-btn {
-            background-color: #3b82f6;
-        }
-        .ai-btn:hover {
-            background-color: #2563eb;
-        }
-        
-.news-box {
-    padding: 30px; /* 文字が詰まらないように余白を少し広げました */
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.95); 
-    color: #111111; 
-    word-wrap: break-word; 
-    
-    /* 9999pxをやめて、これくらいにするとちょうど良い丸みになります */
-    border-radius: 32px; 
-    
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
-}
 
+        /* 青いボタンのホバー効果 */
+        .link-btn:hover {
+            background-color: #2563eb; 
+        }
+
+        /* 📱 スマホ用の調整 */
+        @media (max-width: 500px) {
+            .container {
+                padding: 20px 15px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            p, .info-table {
+                font-size: 13px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <h1>マイクラアップデート情報</h1>
-    <div class="nav-bar">
-        <!-- 💡 タイポ（URL末尾の // ）もここで一緒に直しておきました -->
-        <a id="link-search" class="link-btn ai-btn" href="https://cogie0806.github.io/minecraft-wiki/">🔄 wikiトップに戻る</a>
+    <div class="container">
+        <h1>cogie0806のマイクラリソースパック</h1>
+
+        <p>
+            <strong>【禁止行為】</strong><br>
+            ・許可のない再配布<br>
+            ・自作発言<br><br>
+            動画や配信での使用は、許可なく自由に使っていただいて構いません！（チャンネル登録や概要欄へのURL記載をしてくれると嬉しいです）<br>
+            ※ダウンロードしたZIPを直接ダウンロードしても認識されないため、中身のファイルフォルダーを入れて下さい。
+        </p>
+
+        <table class="info-table">
+
+            
+            <tr>
+                <th>対応環境</th>
+                <td>Java版 1.21.8 〜 26.4snapshot2</td>
+            </tr>
+            <tr>
+                <th>ファイル形式</th>
+                <td>ZIP形式</td>
+            </tr>
+        </table>
+
+<a href="ge.zip" download class="link-btn">📥 死んでしまった! を ゲームオーバー に変えるパックをダウンロード</a>
+<a href="zo.zip" download class="link-btn">📥 腐った肉をゾンビ肉に変えるパックをダウンロード</a>
+<a href="ki.zip" download class="link-btn">📥 木をカタカナから漢字に変えるパックシリーズをダウンロード</a>
+<a id="link-home" class="link-btn" href="https://cogie0806.github.io/minecraft-wiki/">🔄 wikiのトップページへ戻る</a>
+
     </div>
-
-    <h2>26.4</h2>
-    <div id="news1" class="news-box">読み込み中...</div>
-
-    <h2>26.3</h2>
-    <div id="news2" class="news-box">読み込み中...</div>
-    
-    <h2>26.2</h2>
-    <div id="news3" class="news-box">読み込み中...</div>
-
-    <script>
-        function loadNews(file, elementId) {
-            fetch(file)
-                .then(response => {
-                    if (!response.ok) throw new Error('ファイルが見つかりません');
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById(elementId).innerText = data;
-                })
-                .catch(error => {
-                    document.getElementById(elementId).innerText = "アップデート情報の読み込みに失敗しました。";
-                });
-        }
-
-        loadNews('news1.txt', 'news1');
-        loadNews('news2.txt', 'news2');
-        loadNews('news3.txt', 'news3');
-    </script>
 
 </body>
 </html>
